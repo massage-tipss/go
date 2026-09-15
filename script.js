@@ -1,8 +1,9 @@
-/* Edit this block later — price, checkout link, FAQ stay in the HTML. */
+/* Price + your SuperProfile checkout */
 window.OFFER = {
   price: 199,
   oldPrice: 1999,
-  checkout: "#buy",
+  checkout:
+    "https://superprofile.bio/vp/सिर्फ-1-2-दिन-में-शुरू-करें-अपना-लेडीज़-मसाज-बिज़नेस—कमाएं-₹5000-रोज़ाना-💸-24",
 };
 
 function formatInr(n) {
@@ -12,6 +13,7 @@ function formatInr(n) {
 function applyOffer() {
   const { price, oldPrice, checkout } = window.OFFER;
   const off = Math.round((1 - price / oldPrice) * 100);
+  const href = encodeURI(checkout);
   document.querySelectorAll("[data-price]").forEach((el) => {
     el.textContent = formatInr(price);
   });
@@ -21,8 +23,10 @@ function applyOffer() {
   document.querySelectorAll("[data-off]").forEach((el) => {
     el.textContent = off + "% off";
   });
-  document.querySelectorAll('a[data-checkout]').forEach((el) => {
-    el.setAttribute("href", checkout);
+  document.querySelectorAll("a[data-checkout]").forEach((el) => {
+    el.setAttribute("href", href);
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener");
   });
 }
 
