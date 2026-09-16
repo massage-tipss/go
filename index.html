@@ -105,15 +105,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</style>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <style id="list-text-fix">
-	.elementor-icon-list-items { width: 100%; }
+	.elementor-widget-icon-list .elementor-icon-list-items {
+		width: max-content;
+		max-width: 100%;
+		margin-inline: auto;
+	}
 	.elementor-icon-list-item {
 		width: 100% !important;
 		max-width: 100%;
 		display: flex !important;
-	}
-	.elementor-align-center .elementor-icon-list-item,
-	.elementor-mobile-align-center .elementor-icon-list-item {
-		justify-content: center;
+		justify-content: flex-start !important;
 	}
 </style>
 <script src="./indexss_files/wp-emoji-release.min.js" defer=""></script></head>
