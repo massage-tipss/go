@@ -3,7 +3,7 @@ window.OFFER = {
   price: 199,
   oldPrice: 1999,
   checkout:
-    "https://superprofile.bio/vp/सिर्फ-1-2-दिन-में-शुरू-करें-अपना-लेडीज़-मसाज-बिज़नेस—कमाएं-₹5000-रोज़ाना-💸-24",
+    "https://superprofile.bio/vp/massagecarejs",
 };
 
 function formatInr(n) {
