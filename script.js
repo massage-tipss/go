@@ -3,7 +3,7 @@ window.OFFER = {
   price: 199,
   oldPrice: 1999,
   checkout:
-    "https://superprofile.bio/vp/massagecarejs",
+    "https://superprofile.bio/vp/massagecarejs?checkout=true",
 };
 
 function formatInr(n) {
